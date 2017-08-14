@@ -1,0 +1,245 @@
+{
+    "comment": {
+        "top_comment": [
+            {
+                "status": 0,
+                "author": 216204730,
+                "title": "很好",
+                "comment_count": 8,
+                "object_id": 1700115,
+                "content": "不错",
+                "rate": 4,
+                "like_count": 64,
+                "create_time": 1446810549,
+                "type": 0,
+                "id": 1929637
+            },
+            {
+                "status": 0,
+                "author": 937831826,
+                "comment_count": 8,
+                "object_id": 1700115,
+                "content": "写的不错",
+                "rate": 4,
+                "like_count": 30,
+                "create_time": 1446858078,
+                "type": 0,
+                "id": 1932098
+            },
+            {
+                "status": 0,
+                "author": 910248406,
+                "comment_count": 0,
+                "object_id": 1700115,
+                "content": "一般",
+                "rate": 1,
+                "like_count": 29,
+                "create_time": 1446864460,
+                "type": 0,
+                "id": 1932588
+            }
+        ],
+        "top_comment_count": 4,
+        "all_comment_count": 179
+    },
+    "stats": {
+        "paid": 34451
+    },
+    "author_books": [],
+    "related": [
+        {
+            "ad": 0,
+            "word_count": 1539731,
+            "owner": 0,
+            "allow_discount": 0,
+            "ad_time": 0,
+            "ad_duration": 0,
+            "score_count": 78,
+            "title": "重生日本当厨神",
+            "on_sale": true,
+            "comment_count": 0,
+            "has_ad": 0,
+            "latest_id": 693,
+            "score": 9.56,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1494739945,
+            "finish": false,
+            "tags": [
+                "都市生活",
+                "都市"
+            ],
+            "price": 5,
+            "chapter_count": 693,
+            "authors": "千回转",
+            "categories": [
+                {
+                    "category_id": 5000000,
+                    "label": "都市"
+                },
+                {
+                    "category_id": 5000100,
+                    "label": "都市生活"
+                }
+            ],
+            "rights": "阅文集团旗下起点中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01Hy4sqAS05/NU08VJUx2sed76.jpg",
+            "summary": "作死发下大宏愿，宁愿吃料理到撑死的夏羽，来到一个令他完全陌生的食戟之灵世界。\r\n什么，厨神养成？\r\n...",
+            "fiction_id": 350175,
+            "outer_id": "5219954504969703",
+            "latest": "第686章：一致的声音（下）"
+        },
+        {
+            "ad": 0,
+            "word_count": 254254,
+            "owner": 0,
+            "allow_discount": 0,
+            "ad_time": 0,
+            "ad_duration": 0,
+            "score_count": 11,
+            "title": "史上最强败家神豪",
+            "on_sale": true,
+            "comment_count": 0,
+            "has_ad": 0,
+            "latest_id": 141,
+            "score": 6.54,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1494697876,
+            "finish": false,
+            "tags": [
+                "都市",
+                "异术超能"
+            ],
+            "price": 5,
+            "chapter_count": 142,
+            "authors": "梦想长安",
+            "categories": [
+                {
+                    "category_id": 5000000,
+                    "label": "都市"
+                },
+                {
+                    "category_id": 5000300,
+                    "label": "异术超能"
+                }
+            ],
+            "rights": "阅文集团旗下创世中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01w9Yjuy1eW/zfbTauNlhFIQjX.jpg",
+            "summary": "作为史上最强败家神豪系统的宿主怎可默默无闻！\r\n初始任务：一周内涨粉千万！\r\n可用资金：一亿人民币！...",
+            "fiction_id": 355692,
+            "outer_id": "6493103804886403",
+            "latest": "第七章小子，听说你很拽！"
+        },
+        {
+            "ad": 0,
+            "word_count": 1491573,
+            "owner": 0,
+            "allow_discount": 0,
+            "ad_time": 0,
+            "ad_duration": 0,
+            "score_count": 47,
+            "title": "我的绝美御姐老婆",
+            "on_sale": true,
+            "comment_count": 0,
+            "has_ad": 0,
+            "latest_id": 695,
+            "score": 7.78,
+            "allow_free_read": 1,
+            "rights_id": 10080,
+            "channel": [
+                1
+            ],
+            "updated": 1494697333,
+            "finish": false,
+            "tags": [
+                "都市",
+                "都市生活"
+            ],
+            "price": 5,
+            "chapter_count": 696,
+            "authors": "飞爷",
+            "categories": [
+                {
+                    "category_id": 5000000,
+                    "label": "都市"
+                },
+                {
+                    "category_id": 5000100,
+                    "label": "都市生活"
+                }
+            ],
+            "rights": "阅文集团旗下创世中文网",
+            "level": 0,
+            "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01GldWmUla5/Kzmv51QPEV4bL1.jpg",
+            "summary": "【聚焦巅峰 火爆新书】他是世界闻名的巅峰杀手，却被家族逼婚，与美女总裁住在了一起。\r\n彼此看不顺眼却...",
+            "fiction_id": 356218,
+            "outer_id": "3981802704506203",
+            "latest": "第六百九十六章 老子砍你全家！（6更）"
+        }
+    ],
+    "item": {
+        "ad": 0,
+        "word_count": 2113937,
+        "owner": 0,
+        "allow_discount": 0,
+        "ad_time": 0,
+        "ad_duration": 0,
+        "click": 7774526,
+        "score_count": 249,
+        "rights": "阅文集团旗下创世中文网",
+        "title": "无敌小村医",
+        "on_sale": true,
+        "comment_count": 0,
+        "has_ad": 0,
+        "id": 1700115,
+        "content": "这是一个懂武功、精医术的小村医游历花丛爽到爆的故事。\n村花、村嫂、村姨还有城里来的美女村支书、富姐、贵妇------只要你们想得到的；他就能推倒。呵呵，可别想歪了。他是用家传‘太极推拿手’帮她们疗伤、治病！非那个推倒。\n带你感受岭南农村的别样风情；看主角如何从一名小村医一步一步飞黄腾达！VIP作品贴身女主播！谢谢大家订阅支持！",
+        "source": 2,
+        "latest_id": 1018,
+        "score": 7.14,
+        "allow_free_read": 1,
+        "toc": [],
+        "rights_id": 10080,
+        "channel": [
+            1
+        ],
+        "updated": 1480525278,
+        "finish": true,
+        "tags": [
+            "都市生活",
+            "都市"
+        ],
+        "started": 1446690606,
+        "price": 5,
+        "chapter_count": 1016,
+        "authors": "安庸龙",
+        "categories": [
+            {
+                "category_id": 5000000,
+                "label": "都市"
+            },
+            {
+                "category_id": 5000100,
+                "label": "都市生活"
+            }
+        ],
+        "author_books_total": 1,
+        "level": 0,
+        "created": 1446690766,
+        "cover": "http://cover.read.duokan.com/mfsv2/download/fdsc3/p01C1PdeHt03/uMm1tfqwCkDH6M.jpg",
+        "summary": "这是一个懂武功、精医术的小村医游历花丛爽到爆的故事。\n村花、村嫂、村姨还有城里来的美女村支书、富姐、...",
+        "source_id": 315104,
+        "fiction_id": 315104,
+        "outer_id": "563abf2e50e3a468335d1d64",
+        "latest": "第971章一月飞三地（大结局）"
+    },
+    "result": 0
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<title>书城首页</title>
+</head>
+<body>
+<style type="text/css">
+   html, body{
+   	height: 100%;
+   }
+	.container-wrap{
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	.container-scroll{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow-y: scroll;
+	}
+</style>
+   <div id="app" style="width: {{screen_width}}px;overflow: hidden;height: 100%;">
+     <% include include/header.html %>
+     <div style="width: {{double_screen_width}}px;transition-duration: .5s;transform: translate3d({{ position }}px,0px,0px);height: 100%;">
+	    <div class="container-wrap" style="width: {{screen_width}}px; float: left;">
+	        <div class="container-scroll">
+	            <% include include/index-top.html %>
+		   	 	<% include include/index-hot.html %>
+		   	 	<% include include/index-recommend.html %>
+		   	 	<% include include/index-female.html %>
+		   	 	<% include include/index-male.html %>
+		   	 	<% include include/index-free.html %>
+		   	 	<% include include/index-bottom.html %>
+		   	 </div>
+		 </div>
+		 <div style="width: {{screen_width}}px;float: left;">
+	   		    <% include include/index-self.html %>
+	   	 </div>
+	   	</div>
+   	</div>
+   </div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/page/index.js"></script>
+</html>

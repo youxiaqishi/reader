@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<title>搜索</title>
+	<style type="text/css">
+	.search{
+		position: relative;
+		height: 100%;
+	}
+    .search .top{
+      	height: 44px;
+      	background: #efeff0;
+      	border-bottom: 1px solid #ddd;
+      	position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .top{
+      	font: 15px/45px a;
+      	color: rgba(0,0,0,.7);
+      }
+      .top__back{
+      	float: left;
+      	width: 42px;
+      	height: 44px;
+      }
+      .top__back:before{
+      	content: '';
+      	display: block;
+      	margin: 15px 0 0 16px;
+      	width: 10px;
+      	height: 16px;
+      	background: url(http://dushu.xiaomi.com/x0D0GrWs.png) no-repeat;
+      	background-size: 10px 16px;
+      }
+      .search-input{
+      	position: relative;
+      	margin: 5px 20px 5px 42px;
+      	height: 35px;
+      	box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+      }
+      .search-input .search-input__mi{
+      	background: url(http://image.read.duokan.com/mfsv2/download/s010/p01TjruXIhgt/PP13pEqhpChuay.png) no-repeat center;
+      	background-size: 16px 16px;
+      }
+      .search-input b{
+      	position: absolute;
+      	left: 0;
+      	top: 0;
+      	width: 36px;
+      	height: 35px;
+      	border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .search-input input{
+      	border: none;
+      	box-sizing: border-box;
+      	display: block;
+      	width: 100%;
+      	height: 100%;
+      	padding: 8px 52px 8px 42px;
+      	font-size: 14px;
+      	color: rgba(0,0,0,.8);
+      }
+      .search-input__btn{
+      	display: block;
+      	line-height: 36px;
+      	position: absolute;
+      	right: 0;
+      	top: 0;
+      	border-left: 1px solid #ddd;
+      	padding: 0 8px;
+      	font-size: 14px;
+      	color: #666;
+         cursor: pointer;
+      }
+      .container-scroll{
+      	position: absolute;
+      	top: 45px;
+      	bottom: 0;
+      	left: 0;
+      	left: 0;
+      	right: 0;
+      	overflow: auto;
+      }
+      .m-tag{
+      	line-height: 1;
+      	overflow: hidden;
+      }
+      .search-tag{
+      	padding: 17px;
+      }
+      .m-tag .u-tag{
+      	display: inline-block;
+      	width: auto;
+      	line-height: 1.8em;
+      	padding: 0 20px;
+      	color: #766d5d;
+      	font-size: 14px;
+      	text-align: center;
+      	border: 1px solid #d3d3d3;
+      	border-radius: 4px;
+      }
+      .m-tag .u-tag{
+      	margin: 0 10px 5px 0;
+      }
+      .m-tag.-color .u-tag:nth-child(3n+1){
+        background-color: #fbebe8;
+      }
+      .m-tag.-color .u-tag:nth-child(3n+2){
+        background-color: #fcedda;
+      }
+      .m-tag.-color .u-tag:nth-child(3n+3){
+        background-color: #e8f9db;
+      }
+      html, body{
+      	height: 100%;
+      }
+      .Swipe{
+      	height: 100%;
+      	float: left;
+      	position: relative;
+      }
+      .book-list li>.u-book{
+         padding: 13px 14px;
+      }
+      .u-book{
+         position: relative;
+         overflow: hidden;
+      }
+      .u-book .book-cover{
+         float: left;
+         margin-right: 10px;
+      }
+      .book-cover{
+         width: 6.5rem;
+         height: 9.3rem;
+         position: relative;
+         background-color: #eeece9;
+         box-shadow: 0px 6px 5px -3px #aaa;
+         border: 1px solid #f0f0f0;
+         border-bottom: none;
+         overflow: hidden;
+      }
+      .book-cover img{
+         width: 100%;
+         height: 100%;
+      }
+      .u-book .title{
+         margin-bottom: 4px;
+         font-size: 16px;
+         font-weight: 400;
+         color: #000;
+      }
+      .single-line{
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+      }
+      .u-book .summary{
+         margin: 12px 0 4px;
+         font-size: 13px;
+         line-height: 1.6rem;
+         color: #666;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         height: 4.2em;
+         display: -webkit-box;
+         -webkit-line-clamp:2;
+         -webkit-box-orient:vertical;
+      }
+      .u-book .author{
+         color: #4b99a7;
+         font: 12px/1.4 a;
+        margin-top: 50px;
+        margin-right: 5px;
+      }
+      .book-list>li{
+         cursor: pointer;
+         position: relative;
+         overflow: hidden;
+      }
+      .book-list li{
+         border-bottom: 1px solid #f0f0f0;
+      }
+      .channel-group__footer{
+         display: block;
+         border-top: 1px solid #f0f0f0;
+         text-align: center;
+         font-size: 14px;
+         padding: 10px 0;
+      }
+      html,body{
+         height: 100%;
+      }
+      .container-scroll{
+         position: absolute;
+         top: 45px;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         overflow: auto;
+      }
+    </style>
+<body id="search">
+ <div class="Swipe" style="width: {{screenWidth}}px;">
+   <div class="search">
+   	<div class="top">
+   		<a class="top__back"></a>
+   		<div class="search-input">
+   			<b class="search-input__mi"></b>
+   			<input type="text" id="keyword" placeholder="输入书名/作者/关键字">
+   			<div class="search-input__btn" v-on:click='doSearch'>搜索</div>
+   		</div>
+   	</div>
+   	<div class="container-scroll">
+   		<div>
+   			<ul class="m-tag -color search-tag">
+   				<li class="u-tag">如果蜗牛有爱情</li>
+   				<li class="u-tag">如果蜗牛有爱情</li>
+   				<li class="u-tag">如果蜗牛有爱情</li>
+   			</ul>
+   		</div>
+              <ul class="book-list" v-show="!condition">
+               <li v-for="item in search">
+                  <div class="u-book">
+                     <div class="cnt">
+                        <div class="book-cover">
+                         <a href="/book?id=18218">
+                            <img alt="{{item.title}}" v-bind:src="item.cover">
+                         </a> 
+                        </div>
+                        <div class="info">
+                           <h3 class="title">{{item.title}}</h3>
+                           <p class="summary">{{item.intro}}</p>
+
+                           <span class="author" v-for="tag in item.role">
+                              {{tag[0]}}&nbsp{{tag[1]}}
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+              </ul>
+   	</div>
+   </div>
+  </div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/page/search.js"></script>
+</html>

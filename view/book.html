@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<title>数据详情</title>
+	<style type="text/css">
+      .new-page{
+      	background: #fff;
+      	width: 100%;
+      	height: 100%;
+      }
+      .new-page .main-card:first-child{
+      	border-bottom: 0;
+      }
+      .main-card{
+      	border-bottom: 10px solid #f5f5f5;
+      }
+      .u-book.-detail{
+      	padding: 30px 20px 30px 30px;
+      	display: table;
+      	width: 100%;
+      	box-sizing: border-box;
+      }
+      .u-book{
+      	position: relative;
+      	overflow: hidden;
+      }
+      .u-book.-vertical{
+      	width: 86px;
+      }
+      .u-book.-vertical .title{
+      	font-size: 13px;
+      	line-height: 1.4em;
+      	max-height: 2.8em;
+      	overflow: hidden;
+      	color: #8d8d8d;
+      	margin-bottom: 0px;
+      }
+      .u-book.-vertical .book-cover{
+      	float: none;
+      	height: 113px;
+      	width: 86px;
+      }
+      .u-book.-vertical .info{
+      	margin-left: 0px;
+      	padding-top: 8px;
+      }
+      .book-cover{
+      	width: 93px;
+      	height: 124px;
+      	margin-right: 18px;
+      	float: left;
+      	position: relative;
+      	background-color: #eeece9;
+      	box-shadow: 0px 6px 5px -3px #aaa;
+      	border: 1px solid #f0f0f0;
+      	border-bottom: none;
+      	overflow: hidden;
+      }
+      .book-cover img{
+      	width: 100%;
+      	height: 100%;
+      }
+      .u-title{
+      	margin-bottom: 8px;
+      	padding-top: 15px;
+      	padding-left: 14px;
+      	padding-right: 14px;
+      	font-size: 15px;
+      	color: #8d8d8d;
+      }
+      .u-book .info{
+      	padding: 0;
+      	display: table-cell;
+      	vertical-align: middle;
+      }
+      .u-book .title{
+      	margin-bottom: 25px;
+      	font: 16px/17px a;
+      	overflow: hidden;
+      	font-weight: 400;
+      	color: #000;
+      }
+      .u-book .author{
+      	color: #4b99a7;
+      	font: 12px/1.4 a;
+        margin-top: 4px;
+      }
+      .u-book .u-grade{
+      	margin: 3px 0 6px;
+      	line-height: 1;
+      }
+      .u-grade .grade{
+      	height: 12px;
+      	width: 80px;
+      	margin: 0 5px 0 0;
+      	display: inline-block;
+      	vertical-align: middle;
+      	line-height: 1em;
+      	background: url(http://dushu.xiaomi.com/8lqyfBwW.png) no-repeat;
+      	background-size: 78px;
+      }
+      .u-grade .grade7{
+      	background-position: 0 -112px;
+      }
+      .u-grade .read{
+      	.margin-top: 4px;
+      	font-size: 12px;
+      	color: #8d8d8d;
+      }
+      .u-book .price{
+      	color: #727272;
+      	font-size: 12px;
+      }
+      .u-book .count{
+      	color: #6e6e6e;
+      	font-size: 12px;
+      	margin-top: 5px;
+      }
+      .u-book .u-booktag{
+      	margin-left: 10px;
+      	border: 1px solid #00a0e9;
+      	color: #55b4ec;
+      	border-radius: 4px;
+      	font-size: 12px;
+      	display: inline-block;
+      	padding: 0 2px;
+      	line-height: 16px;
+      }
+      .book-dash .wrap{
+      	padding: 0 14px;
+      	margin: 0 0 27px;
+      }
+      .btn-group{
+      	width: 100%;
+      	font-size: 0;
+      	white-space: nowrap;
+      }
+      .btn-group li{
+      	display: inline-block;
+      	width: 49%;
+      }
+      .btn-group li:first-child{
+      	margin-right: 2%;
+      }
+      .u-btn2{
+      	/*position: relative;*/
+      	background: #f35d02;
+      	border: 1px solid #e35109;
+      	color: #fff;
+      	padding: 0 padding;
+      	height: 2.8em;
+      	line-height: 2.8em;
+      	text-align: center;
+      	border-radius: 4px;
+      	font-size: 14px;
+      	cursor: pointer;
+      }
+      .book-dash-text:after{
+      	content: '\5f00\59cb\9605\8bfb';
+      }
+      .u-btn3{
+      	display: block;
+      	height: 2.8em;
+      	line-height: 2.8em;
+      	text-align: center;
+      	color: #737373;
+      	border: 1px solid #ddd;
+      	background: #fff;
+      	border-radius: 4px;
+      	font-size: 14px;
+      	cursor: pointer;
+      }
+      .u-folder>.folder-cnt.-flod{
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp:5;
+        -webkit-box-orient:vertical;
+      }
+      .u-folder>.folder-cnt{
+      	position: relative;
+      	line-height: 1.6;
+      	padding: 0 14px;
+      	margin-bottom: 10px;
+      	font-size: 14px;
+      	color: #585858;
+      }
+      .u-folder>.folder-tail{
+      	text-align: center;
+      	font-size: 14px;
+      	border-top: 1px solid #f0f0f0;
+      	color: #8d8d8d;
+      	padding: 10px 14px;
+      }
+      .u-folder>.folder-top{
+      	font-size: 16px;
+      	font-weight: normal;
+      	color: #8d8d8d;
+      	padding: 14px 14px 8px;
+      }
+      .m-tag{line-height: 1;overflow: hidden;}
+      .m-tag.-color .u-tag:nth-child(3n+1){
+      	background-color: #fbebe8;
+      }
+      .m-tag.-color .u-tag:nth-child(3n+2){
+      	background-color: #fbebe8;
+      }
+      .m-tag.-color .u-tag:nth-child(3n+3){
+      	background-color: #fbebe8;
+      }
+      .m-tag .u-tag{
+      	margin: 0 10px 5px 0;
+      	display: inline-block;
+      	width: auto;
+      	line-height: 1.8em;
+      	padding: 0 20px;
+      	color: #766d5d;
+      	border-radius: 4px;
+      	background: #909da8;
+      	font-size: 14px;
+      	text-align: center;
+      	border: 1px solid #3d3d3d;
+      }
+      .book-table{
+      	font-size: 0;
+      }
+      .book-table li>*{
+      	display: inline-block;
+      }
+      .book-table li{
+        width: 33.3%;
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+      .book-table li:nth-child(3n+1) {
+      	text-align: left;
+      }
+      .book-table li:nth-child(3n+2) {
+      	text-align: center;
+      }
+      .book-table li:nth-child(3n+3) {
+      	text-align: right;
+      }
+      .cnt{
+      	padding: 0 15px;
+      }
+      .main-card.-folder .text{
+      	color: #8d8d8d;
+      	line-height: 1.6;
+      	font-size: 14px;
+      }
+      html,body{
+      	height: 100%;
+      }
+      .container-scroll{
+      	position: absolute;
+      	top: 45px;
+      	left: 0;
+      	right: 0;
+      	bottom: 0;
+      	overflow: auto;
+      }
+    </style>
+<body>
+   <div id="app" style="width: {{screenWidth}}px;">
+     <% include include/common-header.html %>
+     <div class="container-scroll" style="width: {{screenWidth}}px;">
+     	<div class="book-page new-page">
+     		<section class="main-card">
+     			<div class="u-book -detail">
+     				<div class="book-cover">
+     					<img alt="{{d.item.title}}" v-bind:src="d.item.cover">
+     				</div>
+     				<div class="info">
+     					<h3 class="title">{{d.item.title}}</h3>
+     					<p class="author">
+     						<span class="author">{{d.item.authors}}</span>
+     					</p>
+     					<p class="u-grade">
+     					    <span class="grade grade7"></span>
+     						<span class="read">{{d.item.score_count}}个评价</span>
+     					</p>
+     					<p class="price">价格：{{d.item.price}}书币/千字</p>
+     					<p class="count">
+     						字数：{{d.item.word_count}}字
+     						<span class="u-booktag">连载中</span>
+     					</p>
+     				</div>
+     			</div>
+     		</section>
+     		<section class="main-card">
+     		  <div class="book-dash">
+     		  	<div class="wrap">
+     		  		<ul class="btn-group">
+     		  			<li class="u-btn2" v-on:click="readBook()">
+     		  				<span class="book-dash-text"></span>
+     		  			</li>
+     		  			<li>
+     		  				<a class="u-btn3">下载</a>
+     		  			</li>
+     		  		</ul>
+     		  	</div>
+     		  </div>
+     		  <div class="u-folder">
+     		  	<div class="folder-cnt -folder">{{d.item.content}}</div>
+     		  	<div class="folder-tail">
+     		  		最新：{{d.item.latest}}
+     		  	</div>
+     		  </div>
+     		</section>
+     		<section class="main-card">
+     			<div class="u-folder">
+     				<div class="folder-top">
+     					<h3>类别标签</h3>
+     				</div>
+     				<div class="folder-cnt">
+     					<ul class="m-tag -color">
+     						<li class="u-tag" v-for="tag in d.item.tags">{{tag}}</li>
+     					</ul>
+     				</div>
+     			</div>
+     		</section>
+     		<section class="main-card">
+     			<div class="u-title">
+     				<h1>作者喜欢的其他书</h1>
+     			</div>
+     			<div class="cnt">
+     				<ul class="book-table">
+     					<li v-for="book in d.author_books">
+     						<div class="u-book -vertical">
+     							<div class="book-cover">
+     								<img title="{{book.title}}" v-bind:src="book.cover">
+     							</div>
+     						<div class="info">
+     							<h3 class="title">{{book.title}}</h3>
+     						</div>
+     					</div>
+     					</li>
+     				</ul>
+     			</div>
+     		</section>
+     		<section class="main-card">
+     			<div class="u-title">
+     				<h1>喜欢本书的人也喜欢</h1>
+     			</div>
+     			<div class="cnt">
+     				<ul class="book-table">
+     					<li v-for="book in d.related">
+     						<div class="u-book -vertical">
+     							<div class="book-cover">
+     								<img alt="{{book.title}}" v-bind:src="book.cover">
+     							</div>
+     						<div class="info">
+     							<h3 class="title">{{book.title}}</h3>
+     						</div>
+     					</div>
+     					</li>
+     				</ul>
+     			</div>
+     		</section>
+     		<section class="main-card -folder">
+     			<div class="u-title">
+     				<h1>图书信息</h1>
+     			</div>
+     			<div class="cnt">
+     				<div class="text">
+     					<p>版权：{{d.item.rights}}</p>
+     				</div>
+     			</div>
+     		</section>
+     	</div>
+     </div>
+   </div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/page/book.js"></script>
+</html>

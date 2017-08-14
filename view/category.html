@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<title>分类</title>
+	<style type="text/css">
+    .u-area{
+      margin: 0 10px;
+    }
+    .u-ttl{
+      margin: 10px 0;
+      position: relative;
+      line-height: 2.4em;
+      border-bottom: 1px solid #eee;
+      color: #8A8D8E;
+    }
+    .u-ttl-icn *{
+     vertical-align: middle;
+    }
+    .icn-catagory.icn-catagory1{
+      background-position: 0 0; 
+    }
+    .icn-catagory.icn-catagory2{
+      background-position: 0 -64px; 
+    }
+    .icn-catagory{
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(http://dushu.xiaomi.com/v3WqdeYP.png) no-repeat;
+      background-size: 16px;
+    }
+    .u-ttl-icn h1{
+      margin-left: 5px;
+    }
+    .u-ttl h1{
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .u-list-2col{
+      margin-bottom: 2%;
+      overflow: hidden;
+    }
+    .u-list-2col li{
+      float: left;
+      width: 48%;
+      margin: 2% 0 0 0;
+    }
+    .u-list-2col li:nth-child(2n+1){
+      margin-right: 4%;
+    }
+    .u-cat-item{
+      width: 100%;
+      height: 66px;
+      padding: 16px 6px 0;
+      background-color: #eee;
+      background-size: 100%;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      color: #515151;
+    }
+    .u-cat-item h3{
+      font-size: 13px;
+      line-height: 16px;
+    }
+    .u-cat-item .num{
+      font-size: 11px;
+      line-height: 1em;
+      color: #999;
+      padding-top: 6px;
+    }
+    html,body{
+      height: 100%;
+    }
+    .contianer-scroll{
+      position: absolute;
+      top: 45px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: auto;
+    }
+  </style>
+<body>
+   <div id="app" style="width: {{screenWidth}}px;">
+     <% include include/common-header.html %>
+     <div class="contianer-scroll" style="width: {{screenWidth}}px;">
+       <div class="new-page cate-page">
+         <div class="u-area">
+           <section class="m-cat-male">
+             <div class="u-ttl u-ttl-icn">
+               <em class="icn-catagory icn-catagory1"></em>
+               <h1>网文男频</h1>
+             </div>
+               <ul class="u-list-2col">
+                 <li v-for="item in d.male">
+                   <div class="u-cat-item" style="background-image: url({{item.new_image}});">
+                     <h3>{{item.label}}</h3>
+                     <p class="num">{{item.fiction_count}}</p>
+                   </div>
+                 </li>
+               </ul>
+           </section>
+           <section class="m-cat-male">
+             <div class="u-ttl u-ttl-icn">
+               <em class="icn-catagory icn-catagory2"></em>
+               <h1>网文女频</h1>
+             </div>
+               <ul class="u-list-2col">
+                 <li v-for="item in d.female">
+                   <div class="u-cat-item" style="background-image: url({{item.new_image}});">
+                     <h3>{{item.label}}</h3>
+                     <p class="num">{{item.fiction_count}}</p>
+                   </div>
+                 </li>
+               </ul>
+           </section>
+         </div>
+       </div>
+     </div>
+   </div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/page/category.js"></script>
+</html>

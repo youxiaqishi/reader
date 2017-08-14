@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<title>排行</title>
+	<style type="text/css">
+     .original-rank-list__item{
+     	padding: 12px 0 6px 20px;
+     	border-bottom: 1px solid #EEE;
+     	overflow: hidden;
+     }
+     .original-rank-list__img{
+     	width: 90px;
+     	height: 90px;
+     	float: left;
+     }
+     .original-rank-list__content{
+     	font: 14px/26px a;
+     	color: rgba(0,0,0,.6);
+     	margin-left: 108px;
+     	margin-top: 5px;
+     	white-space: nowrap;
+     }
+     .original-rank-list__page{
+     	overflow: hidden;
+     	text-overflow: ellipsis;
+     	white-space: nowrap;
+     }
+     .original-rank-list__num{
+     	margin-right: 7px;
+     	color: #777;
+     }
+     html,body{
+     	height: 100%;
+     }
+     .contianer-scroll{
+     	position: absolute;
+     	top: 45px;
+     	bottom: 0;
+     	left: 0;
+     	right: 0;
+     	overflow: auto;
+     }
+    </style>
+<body>
+   <div id="app" style="width: {{screenWidth}}px;">
+     <% include include/common-header.html %>
+     <div class="contianer-scroll" style="width: {{screenWidth}}px;">
+      <ul class="original-rank-list">
+      	<li class="original-rank-list__item">
+         <a href="/book?id=18218">
+           <img src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01mkWI9RI4H/8KrcvHGWu7J8SH.png" class="original-rank-list__img"/>
+         </a>
+      		<div class="original-rank-list__content">
+      			<p class="original-rank-list__page">
+      				<span class="original-rank-list__num">1</span>
+      				奴家有数
+      			</p>
+      			<p class="original-rank-list__page">
+      				<span class="original-rank-list__num">1</span>
+      				奴家有数
+      			</p>
+      		</div>
+      	</li>
+      </ul>
+     </div>
+   </div>
+</body>
+<script src="../static/script/vue.js"></script>
+<script src="../static/script/zepto.js"></script>
+<script src="../static/script/page/rank.js"></script>
+</html>

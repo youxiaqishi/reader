@@ -1,0 +1,20 @@
+<section class="channel-group">
+	<div class="channel-group__header">
+       <h2 class="channel-group__title">本周最火</h2>
+	</div>
+	<ul class="book-table f-cb">
+		<li v-for="item in hot">
+			<div class="u-book -vertical">
+				<div class="book-cover">
+				  <a href="/book?id=18218">
+				  	<img alt="{{item.title}}" v-bind:src="item.cover">
+				  </a>
+				</div>
+				<div class="book-info">
+				<h3 class="book-info_title">{{item.title}}</h3>
+				</div>	
+			</div>
+		</li>
+	</ul>
+	<a class="channel-group__footer">查看更多</a>
+</section>
