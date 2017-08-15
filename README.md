@@ -25,12 +25,12 @@
 #### 1.目录介绍  
    mock是数据模拟文件，模拟后端数据。  
    service是连接数据（后端）与前端的文件。  
-   static为静态文件
-   view为存放页面文件。  
+   static为静态文件.  
+   view为存放页面文件。  
    app.js为项目入口文件
 #### 2.用到的技能  
-   项目中选用NodeJS做web服务，NodeJS有两大框架koa和ExpressJS,这个项目中选着的是koa框架，优点轻量级。[^学习教程]:http://koa.bootcss.com/
-   用ejs做模板引擎。
-   用Vue.js做数据渲染。
+   项目中选用NodeJS做web服务，NodeJS有两大框架koa和ExpressJS,这个项目中选着的是koa框架，优点轻量级。[学习教程](http://koa.bootcss.com/)  
+   用ejs做模板引擎   
+   用Vue.js做数据渲染。
 ### 总结和收获
 
