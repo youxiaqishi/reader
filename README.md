@@ -28,9 +28,9 @@
    static为静态文件.  
    view为存放页面文件。  
    app.js为项目入口文件
-#### 2.用到的技能  
-   项目中选用NodeJS做web服务，NodeJS有两大框架koa和ExpressJS,这个项目中选着的是koa框架，优点轻量级。[学习教程](http://koa.bootcss.com/)  
-   用ejs做模板引擎。  
+#### 2.用到的技能    
+   项目中选用NodeJS做web服务，NodeJS有两大框架koa和ExpressJS,这个项目中选着的是koa框架，优点轻量级。[学习教程](http://koa.bootcss.com/)  
+   用ejs做模板引擎。  
    用Vue.js做数据驱动。  
    用到移动端最流行的框架之一的Zepto。  
    在阅读器中用到了css3，HTML5的LocalStorange等一些常用的技术。
