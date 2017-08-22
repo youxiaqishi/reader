@@ -3,8 +3,8 @@
 ### 观看指南
 #### 下载方法
      方法一：打开一个空文件夹，调出命令行（默认你已经安装git），输入命令git clone 
-            https://github.com/youxiaqishi/project.git, 也可输入命令git clone 
-            git@github.com:youxiaqishi/project.git.
+            https://github.com/youxiaqishi/reader.git, 也可输入命令git clone 
+            git@github.com:youxiaqishi/reader.git.
      方法二：进入项目你会看到右上角有个绿色按钮（名字为clone or download）,点击按钮，你会发现弹窗的右下角有
             Download ZIP按钮，点击下载到指定的目录即可。
             
@@ -13,7 +13,7 @@
 
 ### 内容概括
 #### 1. 主页面
-       此页面包含头部导航，搜索框，banner,分类，本周最火，重磅推荐，女生最爱，男生最爱，限时免费以及精选专题等小说专题模块。
+       此页面包含头部导航，搜索框，banner。分类:本周最火，重磅推荐，女生最爱，男生最爱，限时免费以及精选专题等小说专题模块。
 #### 2.书籍详情页
        点击书籍，你会进出书籍详情页，这里有书籍的简介以及读者喜欢的其他书籍书单。
 #### 3.小说阅读器页面
